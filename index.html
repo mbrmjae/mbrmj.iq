@@ -22,10 +22,32 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap"></noscript>
 
-    <!-- Prevent flash of invisible content while JS loads -->
+    <!-- Prevent blank white page while JS bundle loads -->
     <style>
-      body { opacity: 1 !important; }
-      [style*="opacity: 0"] { opacity: 1 !important; transition: opacity 0.4s ease; }
+      #root:empty::before {
+        content: '';
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: #1b3250;
+        z-index: 9999;
+      }
+      #root:empty::after {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 48px;
+        height: 48px;
+        margin: -24px 0 0 -24px;
+        border: 4px solid rgba(103, 202, 173, 0.3);
+        border-top-color: #67caad;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        z-index: 10000;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
     </style>
   </head>
   <body>
