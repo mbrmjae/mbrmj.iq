@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect, MouseEvent } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import type { MouseEvent } from 'react';
 import { Monitor, Terminal, GitBranch, MessageSquare, Users, Rocket, ChevronRight, ChevronLeft } from 'lucide-react';
 import { Button } from '../ui/Button';
 
