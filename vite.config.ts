@@ -10,7 +10,6 @@ export default defineConfig({
     react(),
     legacy({
       targets: ['safari >= 14', 'ios_saf >= 14'],
-      modernPolyfills: true,
     }),
   ],
   base: '/mbrmj.iq/',

@@ -13,10 +13,20 @@
     <meta property="og:type" content="website" />
     
     <meta name="theme-color" content="#1b3250" />
-    
+
+    <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Load fonts asynchronously to prevent render blocking -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap"></noscript>
+
+    <!-- Prevent flash of invisible content while JS loads -->
+    <style>
+      body { opacity: 1 !important; }
+      [style*="opacity: 0"] { opacity: 1 !important; transition: opacity 0.4s ease; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
