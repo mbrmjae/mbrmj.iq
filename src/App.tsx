@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
+import { WhyThisExperience } from './components/sections/WhyThisExperience';
 import { Problem } from './components/sections/Problem';
 import { ProgramConcept } from './components/sections/ProgramConcept';
 import { ProjectScenario } from './components/sections/ProjectScenario';
@@ -25,6 +26,7 @@ function App() {
       <main>
         <Hero />
         <AnnouncementTicker />
+        <WhyThisExperience />
         <Problem />
         <ProgramConcept />
         <ProjectScenario />
