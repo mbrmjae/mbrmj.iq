@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #1b3250;
+  --color-brand-navy-dark: #102238;
+  --color-brand-mint: #67caad;
+  --color-brand-mint-dark: #287569;
+  --color-brand-yellow: #f2c94c;
+  --color-background: #f7f9fb;
+  --color-surface: #ffffff;
+  --color-text-primary: #142033;
+  --color-text-secondary: #5e6b7a;
+  --color-border: #dbe3ea;
+  --color-danger: #c44545;
+  --color-success: #247a5a;
+  
+  --font-heading: "Alexandria", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+
+@layer base {
+  html, body {
+    @apply overflow-x-hidden;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body leading-relaxed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight text-brand-navy leading-relaxed;
+  }
+  
+  /* Make sure scrolling to hash id accounts for fixed header */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+  .animate-marquee-reverse {
+    animation: marquee-reverse 40s linear infinite;
+  }
+  .animate-marquee:hover, .animate-marquee-reverse:hover {
+    animation-play-state: paused;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee, .animate-marquee-reverse {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
