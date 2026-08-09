@@ -14,7 +14,7 @@ const reviews = [
   {
     id: 2,
     type: 'image',
-    src: '/assets/Feedback1.png',
+    src: `${import.meta.env.BASE_URL}assets/Feedback1.png`,
     alt: 'رسالة تقييم من متدرب عبر Discord'
   },
   {
@@ -28,7 +28,7 @@ const reviews = [
   {
     id: 4,
     type: 'image',
-    src: '/assets/Feedback2.png',
+    src: `${import.meta.env.BASE_URL}assets/Feedback2.png`,
     alt: 'رأي أحد المشاركين عبر منصة LinkedIn'
   },
   {
@@ -42,7 +42,7 @@ const reviews = [
   {
     id: 6,
     type: 'image',
-    src: '/assets/Feedback3.png',
+    src: `${import.meta.env.BASE_URL}assets/Feedback3.png`,
     alt: 'تقييم إضافي من أحد المشاركين في البرنامج'
   }
 ];

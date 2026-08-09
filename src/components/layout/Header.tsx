@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
           <a href="#" className="flex items-center gap-2 z-50 relative">
             <img 
-              src="/assets/mbrmj-logo.png" 
+              src={`${import.meta.env.BASE_URL}assets/mbrmj-logo.png`} 
               alt="Mbrmj Logo" 
               className={`h-8 transition-all duration-300 ${isScrolled ? 'brightness-0' : 'brightness-0 invert drop-shadow-md'}`}
               onError={(e) => {

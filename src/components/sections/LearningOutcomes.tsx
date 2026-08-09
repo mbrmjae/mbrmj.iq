@@ -42,22 +42,22 @@ export const LearningOutcomes: React.FC = () => {
             <div className="flex animate-marquee shrink-0 items-center w-[200%] gap-8 pr-8">
               {/* Double the array for infinite seamless scrolling effect */}
               {[
-                { src: '/assets/python-logo.png', alt: 'Python' },
-                { src: '/assets/fastapi.png', alt: 'FastAPI' },
-                { src: '/assets/PostgreSQL-Logo.png', alt: 'PostgreSQL' },
-                { src: '/assets/SQLAlchemy.jpg', alt: 'SQLAlchemy' },
-                { src: '/assets/Pytest_logo.svg', alt: 'Pytest' },
-                { src: '/assets/Swagger.png', alt: 'Swagger' },
-                { src: '/assets/git_and_github_logo.png', alt: 'Git & GitHub' },
+                { src: `${import.meta.env.BASE_URL}assets/python-logo.png`, alt: 'Python' },
+                { src: `${import.meta.env.BASE_URL}assets/fastapi.png`, alt: 'FastAPI' },
+                { src: `${import.meta.env.BASE_URL}assets/PostgreSQL-Logo.png`, alt: 'PostgreSQL' },
+                { src: `${import.meta.env.BASE_URL}assets/SQLAlchemy.jpg`, alt: 'SQLAlchemy' },
+                { src: `${import.meta.env.BASE_URL}assets/Pytest_logo.svg`, alt: 'Pytest' },
+                { src: `${import.meta.env.BASE_URL}assets/Swagger.png`, alt: 'Swagger' },
+                { src: `${import.meta.env.BASE_URL}assets/git_and_github_logo.png`, alt: 'Git & GitHub' },
                 
                 // Repeated for seamless scroll
-                { src: '/assets/python-logo.png', alt: 'Python' },
-                { src: '/assets/fastapi.png', alt: 'FastAPI' },
-                { src: '/assets/PostgreSQL-Logo.png', alt: 'PostgreSQL' },
-                { src: '/assets/SQLAlchemy.jpg', alt: 'SQLAlchemy' },
-                { src: '/assets/Pytest_logo.svg', alt: 'Pytest' },
-                { src: '/assets/Swagger.png', alt: 'Swagger' },
-                { src: '/assets/git_and_github_logo.png', alt: 'Git & GitHub' }
+                { src: `${import.meta.env.BASE_URL}assets/python-logo.png`, alt: 'Python' },
+                { src: `${import.meta.env.BASE_URL}assets/fastapi.png`, alt: 'FastAPI' },
+                { src: `${import.meta.env.BASE_URL}assets/PostgreSQL-Logo.png`, alt: 'PostgreSQL' },
+                { src: `${import.meta.env.BASE_URL}assets/SQLAlchemy.jpg`, alt: 'SQLAlchemy' },
+                { src: `${import.meta.env.BASE_URL}assets/Pytest_logo.svg`, alt: 'Pytest' },
+                { src: `${import.meta.env.BASE_URL}assets/Swagger.png`, alt: 'Swagger' },
+                { src: `${import.meta.env.BASE_URL}assets/git_and_github_logo.png`, alt: 'Git & GitHub' }
               ].map((tech, index) => (
                 <div 
                   key={index}

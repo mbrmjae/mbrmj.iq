@@ -64,7 +64,7 @@ export const ProgramTimeline: React.FC = () => {
             <p className="text-white/70 leading-relaxed mb-8 font-light">
               حمّل الخطة التفصيلية للبرنامج لمعرفة المهام اليومية، أوقات جلسات المراجعة المباشرة، والمخرجات المطلوبة منك خطوة بخطوة.
             </p>
-            <a href="/assets/2WeeksPlan.pdf" download="Mbrmj_2Weeks_Plan.pdf" className="inline-block">
+            <a href={`${import.meta.env.BASE_URL}assets/2WeeksPlan.pdf`} download="Mbrmj_2Weeks_Plan.pdf" className="inline-block">
               <Button size="lg" className="flex items-center gap-2 px-8">
                 <FileDown className="w-5 h-5" />
                 تحميل الخطة (PDF)
@@ -75,7 +75,7 @@ export const ProgramTimeline: React.FC = () => {
           <div className="w-full sm:w-2/3 md:w-5/12 shrink-0 relative z-10">
             <div className="absolute inset-0 bg-brand-mint/10 blur-xl rounded-xl group-hover:bg-brand-mint/20 transition-colors duration-500"></div>
             <img 
-              src="/assets/Plan_Cover.png" 
+              src={`${import.meta.env.BASE_URL}assets/Plan_Cover.png`} 
               alt="غلاف خطة الأسبوعين" 
               className="relative z-10 w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group-hover:-translate-y-2 group-hover:rotate-2 transition-transform duration-500"
             />

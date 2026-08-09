@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img 
-                src="/assets/mbrmj-logo.png" 
+                src={`${import.meta.env.BASE_URL}assets/mbrmj-logo.png`} 
                 alt="Mbrmj" 
                 className="h-10 brightness-0 invert opacity-90"
                 onError={(e) => {
