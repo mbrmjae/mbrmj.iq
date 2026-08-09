@@ -3,6 +3,16 @@ import { motion } from 'motion/react';
 import { learningOutcomes } from '../../config/programContent';
 import { CheckCircle2 } from 'lucide-react';
 
+const techLogos = [
+  { src: `${import.meta.env.BASE_URL}assets/python-logo.png`, alt: 'Python' },
+  { src: `${import.meta.env.BASE_URL}assets/fastapi.png`, alt: 'FastAPI' },
+  { src: `${import.meta.env.BASE_URL}assets/PostgreSQL-Logo.png`, alt: 'PostgreSQL' },
+  { src: `${import.meta.env.BASE_URL}assets/SQLAlchemy.jpg`, alt: 'SQLAlchemy' },
+  { src: `${import.meta.env.BASE_URL}assets/Pytest_logo.svg`, alt: 'Pytest' },
+  { src: `${import.meta.env.BASE_URL}assets/Swagger.png`, alt: 'Swagger' },
+  { src: `${import.meta.env.BASE_URL}assets/git_and_github_logo.png`, alt: 'Git & GitHub' }
+];
+
 export const LearningOutcomes: React.FC = () => {
   return (
     <section id="outcomes" className="py-24 bg-background">
@@ -39,38 +49,40 @@ export const LearningOutcomes: React.FC = () => {
             <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
             <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
             
-            <div className="flex animate-marquee shrink-0 items-center w-max gap-8 pr-8">
-              {/* Double the array for infinite seamless scrolling effect */}
-              {[
-                { src: `${import.meta.env.BASE_URL}assets/python-logo.png`, alt: 'Python' },
-                { src: `${import.meta.env.BASE_URL}assets/fastapi.png`, alt: 'FastAPI' },
-                { src: `${import.meta.env.BASE_URL}assets/PostgreSQL-Logo.png`, alt: 'PostgreSQL' },
-                { src: `${import.meta.env.BASE_URL}assets/SQLAlchemy.jpg`, alt: 'SQLAlchemy' },
-                { src: `${import.meta.env.BASE_URL}assets/Pytest_logo.svg`, alt: 'Pytest' },
-                { src: `${import.meta.env.BASE_URL}assets/Swagger.png`, alt: 'Swagger' },
-                { src: `${import.meta.env.BASE_URL}assets/git_and_github_logo.png`, alt: 'Git & GitHub' },
-                
-                // Repeated for seamless scroll
-                { src: `${import.meta.env.BASE_URL}assets/python-logo.png`, alt: 'Python' },
-                { src: `${import.meta.env.BASE_URL}assets/fastapi.png`, alt: 'FastAPI' },
-                { src: `${import.meta.env.BASE_URL}assets/PostgreSQL-Logo.png`, alt: 'PostgreSQL' },
-                { src: `${import.meta.env.BASE_URL}assets/SQLAlchemy.jpg`, alt: 'SQLAlchemy' },
-                { src: `${import.meta.env.BASE_URL}assets/Pytest_logo.svg`, alt: 'Pytest' },
-                { src: `${import.meta.env.BASE_URL}assets/Swagger.png`, alt: 'Swagger' },
-                { src: `${import.meta.env.BASE_URL}assets/git_and_github_logo.png`, alt: 'Git & GitHub' }
-              ].map((tech, index) => (
-                <div 
-                  key={index}
-                  className="flex-shrink-0 w-32 h-16 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
-                >
-                  <img 
-                    src={tech.src} 
-                    alt={tech.alt} 
-                    className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
+            <div dir="ltr" className="flex animate-marquee shrink-0 items-center w-max">
+              {/* First Group */}
+              <div className="flex w-max items-center gap-8 px-4">
+                {techLogos.map((tech, index) => (
+                  <div 
+                    key={`group1-${index}`}
+                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+                  >
+                    <img 
+                      src={tech.src} 
+                      alt={tech.alt} 
+                      className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              {/* Second Group (Identical clone for seamless loop) */}
+              <div className="flex w-max items-center gap-8 px-4" aria-hidden="true">
+                {techLogos.map((tech, index) => (
+                  <div 
+                    key={`group2-${index}`}
+                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+                  >
+                    <img 
+                      src={tech.src} 
+                      alt={tech.alt} 
+                      className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
