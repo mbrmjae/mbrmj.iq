@@ -53,7 +53,7 @@ export const ProjectScenario: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.25, delay: 0.05 }}
             className="md:col-span-4 bg-[#0A1118]/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl hover:border-white/30 transition-colors flex flex-col justify-center"
           >
             <div className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center mb-6">
@@ -70,7 +70,7 @@ export const ProjectScenario: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.25, delay: 0.08 }}
             className="md:col-span-4 bg-[#0A1118]/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl hover:border-blue-400/30 transition-colors flex flex-col justify-center"
           >
             <div className="w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6">
@@ -87,7 +87,7 @@ export const ProjectScenario: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
+            transition={{ duration: 0.25, delay: 0.11 }}
             className="md:col-span-4 bg-[#0A1118]/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl hover:border-yellow-400/30 transition-colors flex flex-col justify-center"
           >
             <div className="w-12 h-12 rounded-full bg-yellow-500/10 text-yellow-400 flex items-center justify-center mb-6">
@@ -104,7 +104,7 @@ export const ProjectScenario: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ duration: 0.25, delay: 0.14 }}
             className="md:col-span-4 bg-[#0A1118]/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl hover:border-brand-mint/30 transition-colors flex flex-col justify-between"
           >
             <div className="mb-6">

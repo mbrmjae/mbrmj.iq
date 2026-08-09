@@ -27,7 +27,7 @@ export const ApplicationProcess: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ duration: 0.25, delay: index * 0.04 }}
                 className="flex flex-col items-center text-center max-w-[150px] relative z-10"
               >
                 <div className="w-16 h-16 rounded-2xl bg-white border border-border shadow-sm flex items-center justify-center text-brand-navy mb-4 relative">

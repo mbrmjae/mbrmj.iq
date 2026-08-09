@@ -65,7 +65,7 @@ export const Reviews: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ duration: 0.25, delay: index * 0.04 }}
               className="break-inside-avoid"
             >
               {review.type === 'text' ? (

@@ -20,7 +20,7 @@ export const ProgramConcept: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ duration: 0.25, delay: index * 0.04 }}
               className="p-6 rounded-xl border border-border bg-background hover:border-brand-mint/50 transition-colors group"
             >
               <div className="w-10 h-10 rounded-lg bg-brand-navy/5 text-brand-navy flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-brand-mint group-hover:text-white transition-colors">

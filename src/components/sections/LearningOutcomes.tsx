@@ -31,7 +31,7 @@ export const LearningOutcomes: React.FC = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
+              transition={{ duration: 0.25, delay: index * 0.02 }}
               className="flex items-start gap-3"
             >
               <CheckCircle2 className="w-6 h-6 text-brand-mint shrink-0 mt-0.5" />

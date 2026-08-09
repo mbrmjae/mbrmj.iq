@@ -99,7 +99,7 @@ export const Eligibility: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.25 }}
             className="bg-[#121c2b]/80 backdrop-blur-xl border border-brand-mint/20 rounded-3xl p-8 lg:p-10 hover:border-brand-mint/40 transition-colors shadow-[0_0_30px_rgba(103,202,173,0.05)] hover:shadow-[0_0_40px_rgba(103,202,173,0.1)] relative overflow-hidden group"
           >
             <div className="absolute top-0 left-0 w-40 h-40 bg-brand-mint/10 blur-[50px] rounded-full group-hover:bg-brand-mint/20 transition-colors"></div>

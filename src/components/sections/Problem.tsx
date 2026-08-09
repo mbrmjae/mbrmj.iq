@@ -32,7 +32,7 @@ export const Problem: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 0.15, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: idx * 0.1, duration: 1 }}
+            transition={{ delay: idx * 0.04, duration: 0.4 }}
             className={`absolute font-mono text-[10px] sm:text-xs md:text-sm whitespace-pre text-slate-400 leading-relaxed
               ${idx === 0 ? 'top-[5%] left-[2%] -rotate-2' : ''}
               ${idx === 1 ? 'top-[45%] right-[5%] rotate-3' : ''}
@@ -96,7 +96,7 @@ export const Problem: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.15 }}
+              transition={{ duration: 0.25 }}
               className="bg-brand-navy rounded-3xl p-8 lg:p-12 shadow-[0_20px_50px_rgba(27,50,80,0.15)] w-full lg:w-[55%] relative z-10 border border-brand-navy-dark overflow-hidden"
             >
               {/* Subtle inner glow */}
