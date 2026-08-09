@@ -76,6 +76,8 @@ export const ProgramTimeline: React.FC = () => {
             <div className="absolute inset-0 bg-brand-mint/10 blur-xl rounded-xl group-hover:bg-brand-mint/20 transition-colors duration-500"></div>
             <img 
               src={`${import.meta.env.BASE_URL}assets/Plan_Cover.png`} 
+              loading="lazy"
+              decoding="async"
               alt="غلاف خطة الأسبوعين" 
               className="relative z-10 w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 group-hover:-translate-y-2 group-hover:rotate-2 transition-transform duration-500"
             />

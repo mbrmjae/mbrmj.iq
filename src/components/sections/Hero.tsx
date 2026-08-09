@@ -16,8 +16,8 @@ export const Hero: React.FC = () => {
     <section className="relative min-h-[100svh] flex items-center pt-24 pb-16 bg-[#0A1118] overflow-hidden">
       {/* Ambient Glows */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[60%] rounded-full bg-brand-mint/10 blur-[120px]" />
-        <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brand-navy-dark/80 blur-[100px]" />
+        <div className="hero-glow hero-glow-mint absolute top-[-10%] right-[-5%] w-[60%] h-[60%] rounded-full" />
+        <div className="hero-glow hero-glow-navy absolute bottom-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full" />
       </div>
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">

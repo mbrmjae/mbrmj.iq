@@ -7,22 +7,26 @@ interface TickerLineProps {
   reverse?: boolean;
 }
 
+// Keep the repeated strip comfortably wider than a phone viewport without
+// creating the extremely wide composited layer that mobile Safari struggles
+// to paint reliably.
+const TICKER_ITEMS = 6;
+
 const TickerLine: React.FC<TickerLineProps> = ({ 
   text, 
   colorClasses, 
   rotationClass, 
   reverse = false 
 }) => {
-  // We duplicate the text enough times to ensure it fills the width of any screen
-  const items = Array(15).fill(text);
+  const items = Array.from({ length: TICKER_ITEMS }, () => text);
 
   return (
     <div 
       dir="ltr"
-      className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] py-4 shadow-xl flex overflow-hidden z-10 ${colorClasses} ${rotationClass}`}
+      className={`ticker-line absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[112vw] py-4 shadow-lg flex overflow-hidden z-10 ${colorClasses} ${rotationClass}`}
     >
       <div 
-        className={`flex w-max ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'}`}
+        className={`ticker-track flex w-max ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'}`}
       >
         <div className="flex w-max items-center gap-8 px-4">
           {items.map((item, idx) => (

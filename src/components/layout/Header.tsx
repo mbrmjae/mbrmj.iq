@@ -8,11 +8,24 @@ export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let frameId: number | null = null;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (frameId !== null) return;
+
+      frameId = window.requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 20);
+        frameId = null;
+      });
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (frameId !== null) window.cancelAnimationFrame(frameId);
+    };
   }, []);
 
   const navLinks = [
@@ -51,6 +64,10 @@ export const Header: React.FC = () => {
             <img 
               src={`${import.meta.env.BASE_URL}assets/mbrmj-logo.png`} 
               alt="Mbrmj Logo" 
+              width="69"
+              height="32"
+              decoding="async"
+              fetchPriority="high"
               className={`h-8 transition-all duration-300 ${isScrolled ? 'brightness-0' : 'brightness-0 invert drop-shadow-md'}`}
               onError={(e) => {
                 // Fallback text if image not found

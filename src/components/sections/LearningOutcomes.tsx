@@ -61,7 +61,8 @@ export const LearningOutcomes: React.FC = () => {
                       src={tech.src} 
                       alt={tech.alt} 
                       className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal"
-                      loading="eager"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}
@@ -78,7 +79,8 @@ export const LearningOutcomes: React.FC = () => {
                       src={tech.src} 
                       alt={tech.alt} 
                       className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal"
-                      loading="eager"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}

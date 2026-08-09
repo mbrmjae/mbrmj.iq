@@ -44,7 +44,7 @@ export const ProjectScenario: React.FC = () => {
               </p>
             </div>
             <div className="w-full md:w-5/12 shrink-0 relative rounded-xl overflow-hidden shadow-2xl border border-white/5 group-hover:scale-105 transition-transform duration-500">
-               <img src={`${import.meta.env.BASE_URL}assets/PRD-Cover.png`} alt="PRD Cover" className="w-full h-auto object-cover" />
+               <img src={`${import.meta.env.BASE_URL}assets/PRD-Cover.png`} alt="PRD Cover" className="w-full h-auto object-cover" loading="lazy" decoding="async" />
             </div>
           </motion.div>
 
@@ -109,7 +109,7 @@ export const ProjectScenario: React.FC = () => {
           >
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-4">
-                <img src={`${import.meta.env.BASE_URL}assets/Google_Drive_icon_(2020).svg`} alt="Google Drive" className="w-8 h-8" />
+                <img src={`${import.meta.env.BASE_URL}assets/Google_Drive_icon_(2020).svg`} alt="Google Drive" className="w-8 h-8" loading="lazy" decoding="async" />
                 <h3 className="text-xl font-bold text-white">مساحة عمل سحابية</h3>
               </div>
               <p className="text-white/60 text-sm leading-relaxed">
@@ -119,7 +119,7 @@ export const ProjectScenario: React.FC = () => {
             
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-4 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
-                <img src={`${import.meta.env.BASE_URL}assets/Google_Sheets_Logo_512px.png`} alt="Google Sheets" className="w-7 h-7" />
+                <img src={`${import.meta.env.BASE_URL}assets/Google_Sheets_Logo_512px.png`} alt="Google Sheets" className="w-7 h-7" loading="lazy" decoding="async" />
                 <div className="flex flex-col">
                   <span className="text-white text-sm font-medium">جدول تتبع الإنجاز</span>
                   <span className="text-white/40 text-xs mt-0.5">Progress Tracking</span>
@@ -127,7 +127,7 @@ export const ProjectScenario: React.FC = () => {
               </div>
               
               <div className="flex items-center gap-4 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
-                <img src={`${import.meta.env.BASE_URL}assets/google-doc.png`} alt="Google Docs" className="w-7 h-7" />
+                <img src={`${import.meta.env.BASE_URL}assets/google-doc.png`} alt="Google Docs" className="w-7 h-7" loading="lazy" decoding="async" />
                 <div className="flex flex-col">
                   <span className="text-white text-sm font-medium">نماذج التقارير</span>
                   <span className="text-white/40 text-xs mt-0.5">Docs Templates</span>

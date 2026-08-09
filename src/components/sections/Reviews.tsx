@@ -101,6 +101,8 @@ export const Reviews: React.FC = () => {
                   <img 
                     src={review.src} 
                     alt={review.alt} 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-contain relative z-10 opacity-0 transition-opacity duration-300"
                     onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
                     onError={(e) => e.currentTarget.classList.add('hidden')}

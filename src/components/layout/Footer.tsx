@@ -39,6 +39,10 @@ export const Footer: React.FC = () => {
               <img 
                 src={`${import.meta.env.BASE_URL}assets/mbrmj-logo.png`} 
                 alt="Mbrmj" 
+                width="87"
+                height="40"
+                loading="lazy"
+                decoding="async"
                 className="h-10 brightness-0 invert opacity-90"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';

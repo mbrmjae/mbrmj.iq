@@ -1,4 +1,5 @@
 
+import { lazy, Suspense } from 'react';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
@@ -11,8 +12,11 @@ import { Eligibility } from './components/sections/Eligibility';
 import { ApplicationProcess } from './components/sections/ApplicationProcess';
 import { FAQ } from './components/sections/FAQ';
 import { Reviews } from './components/sections/Reviews';
-import { Registration } from './components/sections/Registration';
 import { AnnouncementTicker } from './components/sections/AnnouncementTicker';
+
+const Registration = lazy(() =>
+  import('./components/sections/Registration').then(({ Registration }) => ({ default: Registration }))
+);
 
 function App() {
   return (
@@ -30,7 +34,9 @@ function App() {
         <ApplicationProcess />
         <Reviews />
         <FAQ />
-        <Registration />
+        <Suspense fallback={<section className="min-h-[36rem] bg-background" aria-hidden="true" />}>
+          <Registration />
+        </Suspense>
       </main>
       <Footer />
     </div>

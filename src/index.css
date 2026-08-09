@@ -39,35 +39,54 @@
 }
 
 @layer utilities {
+  /* Radial gradients are much cheaper for mobile Safari than animating and
+     scrolling past viewport-sized elements with large CSS blur filters. */
+  .hero-glow-mint {
+    background: radial-gradient(circle, rgb(103 202 173 / 0.16), transparent 70%);
+  }
+
+  .hero-glow-navy {
+    background: radial-gradient(circle, rgb(16 34 56 / 0.9), transparent 70%);
+  }
+
+  .ticker-line {
+    contain: layout paint;
+    isolation: isolate;
+  }
+
+  .ticker-track {
+    flex-shrink: 0;
+  }
+
   .animate-marquee {
     animation: marquee 40s linear infinite;
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
   }
   .animate-marquee-reverse {
     animation: marquee-reverse 40s linear infinite;
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
   }
-  .animate-marquee:hover, .animate-marquee-reverse:hover {
-    animation-play-state: paused;
+
+  /* iOS Safari keeps :hover active after a tap. Only pause on devices that
+     have a real hover pointer so the ticker cannot get stuck on iPhone. */
+  @media (hover: hover) and (pointer: fine) {
+    .animate-marquee:hover, .animate-marquee-reverse:hover {
+      animation-play-state: paused;
+    }
   }
   
   @media (prefers-reduced-motion: reduce) {
     .animate-marquee, .animate-marquee-reverse {
-      animation-play-state: paused;
+      animation: none;
+      transform: translateX(0);
     }
   }
 }
 
 @keyframes marquee {
-  0%   { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes marquee-reverse {
-  0%   { transform: translate3d(-50%, 0, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
