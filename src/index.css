@@ -39,14 +39,38 @@
 }
 
 @layer utilities {
-  /* Radial gradients are much cheaper for mobile Safari than animating and
-     scrolling past viewport-sized elements with large CSS blur filters. */
+  /* Touch/mobile devices get a fully faded circular gradient. Keeping the
+     transparent stop inside the closest edge prevents visible box bounds. */
   .hero-glow-mint {
-    background: radial-gradient(circle, rgb(103 202 173 / 0.16), transparent 70%);
+    background: radial-gradient(
+      circle closest-side,
+      rgb(103 202 173 / 0.18) 0%,
+      rgb(103 202 173 / 0.10) 38%,
+      transparent 72%
+    );
   }
 
   .hero-glow-navy {
-    background: radial-gradient(circle, rgb(16 34 56 / 0.9), transparent 70%);
+    background: radial-gradient(
+      circle closest-side,
+      rgb(16 34 56 / 0.95) 0%,
+      rgb(16 34 56 / 0.65) 38%,
+      transparent 72%
+    );
+  }
+
+  /* Restore the richer blur on desktops where the larger composited layer is
+     inexpensive. iPhone/iPad Safari stays on the radial-gradient version. */
+  @media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+    .hero-glow-mint {
+      background: rgb(103 202 173 / 0.10);
+      filter: blur(120px);
+    }
+
+    .hero-glow-navy {
+      background: rgb(16 34 56 / 0.80);
+      filter: blur(100px);
+    }
   }
 
   .ticker-line {
