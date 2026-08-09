@@ -39,7 +39,7 @@ export const LearningOutcomes: React.FC = () => {
             <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
             <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
             
-            <div className="flex animate-marquee shrink-0 items-center w-[200%] gap-8 pr-8">
+            <div className="flex animate-marquee shrink-0 items-center w-max gap-8 pr-8">
               {/* Double the array for infinite seamless scrolling effect */}
               {[
                 { src: `${import.meta.env.BASE_URL}assets/python-logo.png`, alt: 'Python' },
