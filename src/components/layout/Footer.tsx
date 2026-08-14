@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">مستعد لتخوض تجربة العمل البرمجي الحقيقية؟</h2>
           <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            إذا كنت مستعدًا للتعلّم من مشروع قائم، مواجهة المشكلات، واتخاذ قراراتك كمطوّر، فقد تكون هذه التجربة خطوتك القادمة.
+            إذا كنت مستعداً للتعلّم من مشروع قائم، مواجهة المشكلات، واتخاذ قراراتك كمطوّر، فقد تكون هذه التجربة خطوتك القادمة.
           </p>
           <Button variant="secondary" size="lg" className="w-full sm:w-auto" onClick={scrollToRegistration}>
             قدّم طلبك للدفعة الأولى
