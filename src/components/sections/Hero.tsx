@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
             <div className="flex flex-wrap justify-center xl:justify-start gap-x-6 gap-y-3 text-sm text-white/60">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-brand-mint/80 shrink-0" />
-                <span>14 يومًا</span>
+                <span>14 يوما</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-brand-mint/80 shrink-0" />

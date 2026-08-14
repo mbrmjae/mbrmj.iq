@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../ui/Button';
+import { Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToRegistration = (e?: React.MouseEvent) => {
@@ -49,9 +50,20 @@ export const Footer: React.FC = () => {
                 }}
               />
             </div>
-            <p className="text-white/70 max-w-sm">
+            <p className="text-white/70 max-w-sm mb-6">
               نتعلم البرمجة من خلال تجربة العمل الحقيقي.
             </p>
+            <div className="flex items-center gap-4 mt-2">
+              <a href="https://instagram.com/mbrmj.ae" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/80 hover:bg-brand-mint hover:text-brand-navy transition-colors shadow-sm" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://tiktok.com/@mbrmj.ae" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/80 hover:bg-brand-mint hover:text-brand-navy transition-colors shadow-sm" aria-label="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3 3v5a4 4 0 0 1-4-4Z"></path>
+                </svg>
+              </a>
+              <span className="text-white/70 text-sm font-medium tracking-wide" dir="ltr">@mbrmj.ae</span>
+            </div>
           </div>
           <div className="flex flex-col md:items-end justify-center">
             <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-white/70">
